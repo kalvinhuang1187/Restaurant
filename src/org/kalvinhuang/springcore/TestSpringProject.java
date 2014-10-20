@@ -11,7 +11,7 @@ public class TestSpringProject {
 			new ClassPathXmlApplicationContext("SpringConfig.xml");
 		
 		//requesting Spring framework to create/return an object called restaurantBean
-		//	which will first create a Tea object
+		//	which will first create a Tea object then inject this object into the Restaurant class constructor
 		Restaurant restaurantObj = (Restaurant) context.getBean ("restaurantBean");
 		
 		restaurantObj.prepareHotDrink();
