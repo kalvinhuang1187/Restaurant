@@ -1,18 +1,30 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		
-<bean id="restaurantBean" class="org.kalvinhuang.springcore.Restaurant">
-	<!-- Dependency Injection using constructor
-	<constructor-arg ref="teaBean"/>
-	-->
+	<bean id="restaurantBean" class="org.kalvinhuang.springcore.Restaurant">
 	
-	<!-- Dependency Injection using setter -->
-	<property name="hotDrink" ref="teaBean"/>		
-</bean>
+		<property name="restaurantWaitersList">
+			<list>
+				<value>Mr. Smith</value>
+				<value>Mrs. Jones</value>
+				<value>Mr. Curtis</value>
+				<value>Mr. Curtis</value>
+			</list>
+		</property>
+		
+		<!-- Dependency Injection using constructor
+		<constructor-arg ref="teaBean"/>
+		-->
+	
+		<!-- Dependency Injection using setter-->
+		<property name="hotDrink" ref="teaBean"/>
+				
+	</bean>
 
-<bean id="teaBean" class="org.kalvinhuang.springcore.Tea"></bean>
+	<bean id="teaBean" class="org.kalvinhuang.springcore.Tea">
+	</bean>
 	
 </beans>
 	

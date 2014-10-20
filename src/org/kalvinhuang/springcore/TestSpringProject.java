@@ -14,6 +14,8 @@ public class TestSpringProject {
 		//	which will first create a Tea object then inject this object into the Restaurant class constructor
 		Restaurant restaurantObj = (Restaurant) context.getBean ("restaurantBean");
 		
+		restaurantObj.displayWaitersNames();
+		
 		restaurantObj.prepareHotDrink();
 	}
 }

@@ -1,6 +1,19 @@
 package org.kalvinhuang.springcore;
 
+import java.util.List;
+
 public class Restaurant {
+	
+	private List restaurantWaitersList;
+	
+	public void setRestaurantWaitersList(List restaurantWaitersList) {
+		this.restaurantWaitersList = restaurantWaitersList;
+	}
+	
+	public void displayWaitersNames() {
+		System.out.println("All waiters working in Restaurant: " + restaurantWaitersList);
+	}
+	
 	
 	IHotDrink hotDrink;
 	
