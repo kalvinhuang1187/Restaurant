@@ -13,6 +13,6 @@ public class TestSpringProject {
 		//requesting Spring framework to create/return an object called restaurantBean  
 		Restaurant restaurantObj = (Restaurant) context.getBean ("restaurantBean");
 		
-		restaurantObj.greetCustomer();
+		restaurantObj.prepareHotDrink();
 	}
 }
