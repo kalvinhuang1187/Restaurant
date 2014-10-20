@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		
-	<bean id="restaurantBean" class="org.kalvinhuang.springcore.Restaurant" scope="prototype">
+	<bean id="restaurantBean" class="org.kalvinhuang.springcore.Restaurant" scope="prototype" lazy-init="true">
 																	<!-- scope="singleton" -->
 	</bean>
 
