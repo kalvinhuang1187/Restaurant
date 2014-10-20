@@ -3,29 +3,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		
-	<bean id="restaurantBean" class="org.kalvinhuang.springcore.Restaurant">
-	
-		<property name="restaurantWaitersList">
-			<list>
-				<value>Mr. Smith</value>
-				<value>Mrs. Jones</value>
-				<value>Mr. Curtis</value>
-				<value>Mr. Curtis</value>
-			</list>
-		</property>
-		
-		<!-- Dependency Injection using constructor
-		<constructor-arg ref="teaBean"/>
-		-->
-	
-		<!-- Dependency Injection using setter-->
-		<property name="hotDrink" ref="teaBean"/>
-				
+	<bean id="restaurantBean" class="org.kalvinhuang.springcore.Restaurant" scope="prototype">
+																	<!-- scope="singleton" -->
 	</bean>
 
-	<bean id="teaBean" class="org.kalvinhuang.springcore.Tea">
-	</bean>
-	
 </beans>
 	
 	
