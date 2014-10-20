@@ -10,7 +10,8 @@ public class TestSpringProject {
 		ApplicationContext context =
 			new ClassPathXmlApplicationContext("SpringConfig.xml");
 		
-		//requesting Spring framework to create/return an object called restaurantBean  
+		//requesting Spring framework to create/return an object called restaurantBean
+		//	which will first create a Tea object
 		Restaurant restaurantObj = (Restaurant) context.getBean ("restaurantBean");
 		
 		restaurantObj.prepareHotDrink();
