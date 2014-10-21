@@ -4,7 +4,10 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 		
-	<bean id="restaurantBean" class="org.kalvinhuang.springcore.Restaurant">																	
+	<bean id="restaurantBean" class="org.kalvinhuang.springcore.Restaurant" init-method="init" destroy-method="destroy">																	
+	</bean>
+	
+	<bean class="org.kalvinhuang.springcore.DemoBeanPostProcessor">
 	</bean>
 
 </beans>
